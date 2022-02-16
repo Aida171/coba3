@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel | Blog</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Ini Halaman Blog</h1>
-</body>
-</html>
+{{-- @dd($posts) --}}
+
+@extends('layouts.main')
+
+@section('container')
+    @foreach ($posts as $post)
+        <article class="mb-5">
+            <a href ="/posts/{{ $post["slug"] }}"><h2>{{ $post["title"] }}</h2></a>
+            <h6>By : {{ $post["author"] }}</h6>
+            <p>{{ $post["body"] }}</p>
+        </article>
+    @endforeach
+@endsection
