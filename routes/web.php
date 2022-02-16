@@ -13,12 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Halaman Home
 Route::get('/', function () {
     return view('home', [
         "title" => "Home"
     ]);
 });
 
+//Halaman About
 Route::get('/about', function () {
     return view('about', [
         "title" => "About",
@@ -28,6 +30,7 @@ Route::get('/about', function () {
     ]);
 });
 
+//Halaman Blog
 Route::get('/blog', function () {
     $blog_posts = [
         [
@@ -53,6 +56,7 @@ Route::get('/blog', function () {
     ]);
 });
 
+//Halaman Single Post
 Route::get('/posts/{slug}', function ($slug) {
     $blog_posts = [
         [
