@@ -1,0 +1,18 @@
+<!-- beberapa perintah yang dapat digunakan  -->
+
+<!-- Cara tambah data sekaligus pada db-->
+Post::create([
+'title' => 'Judul Post Ketiga',
+'slug' => 'judul-post-ketiga',
+'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste recusandae temporibus amet odit nihil
+obcaecati necessitatibus, officiis reiciendis quia quod hic facilis commodi praesentium porro sequi.',
+'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident eveniet explicabo, totam iusto quod
+magnam aperiam eos harum, labore laborum vitae, velit voluptate in optio aut architecto quasi doloribus qui pariatur
+aliquid nobis ipsam perferendis deleniti? Eveniet, quas beatae autem rerum aspernatur quidem, blanditiis minus cumque
+impedit nesciunt animi rem incidunt molestias distinctio voluptates nostrum provident similique veniam. Voluptatem,
+recusandae numquam sequi sunt sapiente repellendus molestias quo ullam voluptatibus possimus dolorum, esse reiciendis
+reprehenderit delectus aliquid quasi atque amet modi? Consequuntur explicabo quia neque'
+])
+
+<!-- Perintah untuk mengedit data pada db-->
+Post::find(2)->update(['title' => 'Mempelajari Git dan GitHub'])

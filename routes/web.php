@@ -36,4 +36,5 @@ Route::get('/about', function () {
 Route::get('/post', [PostController::class, 'index']);
 
 //Halaman Single Post
-Route::get('/posts/{slug}', [PostController::class, 'show']);
+//tanpa :slug maka data yang diambil akna berdasarkan id pada tabel
+Route::get('/posts/{post:slug}', [PostController::class, 'show']);
