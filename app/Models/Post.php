@@ -14,4 +14,9 @@ class Post extends Model
 
     // coloum yang gak bisa diubah datanya 
     protected $guarded = ['id'];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

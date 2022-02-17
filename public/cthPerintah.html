@@ -1,0 +1,25 @@
+<!-- beberapa perintah yang dapat digunakan  -->
+
+<!-- Membuat Model dan Migration nya -->
+php artisan make:model Category --migration
+
+<!-- Cara tambah data sekaligus pada db-->
+Post::create([
+'title' => 'Judul Keempat',
+'category_id' => 1,
+'slug' => 'judul-keempat',
+'excerpt' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat earum nulla animi itaque neque. Nobis,
+itaque. Aut, nulla ipsum? Molestiae.',
+'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta cumque perferendis soluta repudiandae
+nostrum facilis, velit commodi quidem veniam provident animi eaque totam a sapiente voluptas temporibus qui rem et nam
+itaque obcaecati corrupti maiores natus! Quam non dicta earum ab facilis rerum quod. Autem soluta impedit voluptatibus
+eum modi!'
+])
+
+<!-- Perintah untuk mengedit data pada db-->
+Post::find(1)->update(['title' => 'judul-pertama'])
+
+Category::create([
+'name' => 'Personal',
+'slug' => 'personal'
+])
